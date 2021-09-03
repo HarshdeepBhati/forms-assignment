@@ -4,35 +4,40 @@
         <label for="fullName" class="col-sm-2 col-form-label">Full Name</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" formControlName="fullName">
-            <small *ngIf="!registerForm.get('fullName')?.valid && registerForm.get('fullName')?.touched" class="text-danger">Name is required*</small>
+            <small *ngIf="!registerForm.get('fullName')?.valid && registerForm.get('fullName')?.touched"
+                class="text-danger">Name is required*</small>
         </div>
     </div>
     <div class="row mb-3">
         <label for="emailId" class="col-sm-2 col-form-label">Enter E-Mail</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" formControlName="emailId">
-            <small *ngIf="!registerForm.get('emailId')?.valid && registerForm.get('emailId')?.touched" class="text-danger">Enter Valid Email*</small>
+            <small *ngIf="!registerForm.get('emailId')?.valid && registerForm.get('emailId')?.touched"
+                class="text-danger">Enter Valid Email*</small>
         </div>
     </div>
     <div class="row mb-3">
         <label for="createPassword" class="col-sm-2 col-form-label">Create Password</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" formControlName="createPassword">
-            <small *ngIf="!registerForm.get('createPassword')?.valid && registerForm.get('createPassword')?.touched" class="text-danger">Enter Valid Password*</small>
+            <small *ngIf="!registerForm.get('createPassword')?.valid && registerForm.get('createPassword')?.touched"
+                class="text-danger">Enter Valid Password*</small>
         </div>
     </div>
     <div class="row mb-3">
         <label for="mobileNumber" class="col-sm-2 col-form-label">Enter Phone Number</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" formControlName="mobileNumber">
-            <small *ngIf="!registerForm.get('mobileNumber')?.valid && registerForm.get('mobileNumber')?.touched" class="text-danger">Enter Minimum 6 Numbers*</small>
+            <small *ngIf="!registerForm.get('mobileNumber')?.valid && registerForm.get('mobileNumber')?.touched"
+                class="text-danger">Enter Minimum 6 Numbers*</small>
         </div>
     </div>
     <div class="row mb-3">
         <label for="currentCity" class="col-sm-2 col-form-label">Enter City</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" formControlName="currentCity">
-            <small *ngIf="!registerForm.get('currentCity')?.valid && registerForm.get('currentCity')?.touched" class="text-danger">Enter City*</small>
+            <small *ngIf="!registerForm.get('currentCity')?.valid && registerForm.get('currentCity')?.touched"
+                class="text-danger">Enter City*</small>
         </div>
     </div>
     <div formArrayName="family">
@@ -43,7 +48,7 @@
         </div>
 
 
-        <div *ngFor="let fam of family().controls; let i=index"[formGroupName]="i">
+        <div *ngFor="let fam of family().controls; let i=index" [formGroupName]="i">
             <!-- The repeated alias template -->
             <div class="row mb-3">
                 <label for="Name-{{ i }}" class="col-sm-2 col-form-label">Name</label>
@@ -81,7 +86,7 @@
         <h4>Current City: {{getCity}}</h4>
     </div>
     <div class="w-100"></div>
-  </div>
+</div>
 <div class="row">
     <div class="col">
         <h4>Relation Name: {{getFamilyName?.value.rname}}</h4>
@@ -90,7 +95,3 @@
         <h4>Relation: {{getFamilyName?.value.relation}}</h4>
     </div>
 </div>
-
-
-
-
